@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4404D6071EF567DC00BFA69A /* helpManual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4404D6061EF567DC00BFA69A /* helpManual.pdf */; };
+		4404D60B1EF574E800BFA69A /* GEUK.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4404D6081EF574E800BFA69A /* GEUK.sqlite */; };
+		4404D60C1EF574E800BFA69A /* GEUK.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 4404D6091EF574E800BFA69A /* GEUK.sqlite-shm */; };
+		4404D60D1EF574E800BFA69A /* GEUK.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 4404D60A1EF574E800BFA69A /* GEUK.sqlite-wal */; };
+		44CA427E1E488B4100C16656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA427D1E488B4100C16656 /* AppDelegate.swift */; };
+		44CA42881E488B4100C16656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44CA42871E488B4100C16656 /* Assets.xcassets */; };
+		44CA428B1E488B4100C16656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CA42891E488B4100C16656 /* LaunchScreen.storyboard */; };
+		44CA42941E488DFE00C16656 /* GEUK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42921E488DFE00C16656 /* GEUK.xcdatamodeld */; };
+		44CA42D91E488E9C00C16656 /* ConstituencyLocAuth+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42C31E488E9C00C16656 /* ConstituencyLocAuth+CoreDataProperties.swift */; };
+		44CA42DB1E488E9C00C16656 /* Detail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42C51E488E9C00C16656 /* Detail+CoreDataProperties.swift */; };
+		44CA42DD1E488E9C00C16656 /* Election+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42C71E488E9C00C16656 /* Election+CoreDataProperties.swift */; };
+		44CA42DF1E488E9C00C16656 /* Party+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42C91E488E9C00C16656 /* Party+CoreDataProperties.swift */; };
+		44CA42E11E488E9C00C16656 /* PartySummary+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42CB1E488E9C00C16656 /* PartySummary+CoreDataProperties.swift */; };
+		44CA42E31E488E9C00C16656 /* Constituency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42CD1E488E9C00C16656 /* Constituency+CoreDataProperties.swift */; };
+		44CA42E51E488E9C00C16656 /* SimPartyConstituencies+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42CF1E488E9C00C16656 /* SimPartyConstituencies+CoreDataProperties.swift */; };
+		44CA42E71E488E9C00C16656 /* WardConLocAuth+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42D11E488E9C00C16656 /* WardConLocAuth+CoreDataProperties.swift */; };
+		44CA42E91E488E9C00C16656 /* EUReferendum+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42D31E488E9C00C16656 /* EUReferendum+CoreDataProperties.swift */; };
+		44CA42EB1E488E9C00C16656 /* Simulation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42D51E488E9C00C16656 /* Simulation+CoreDataProperties.swift */; };
+		44CA42ED1E488E9C00C16656 /* Summary+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42D71E488E9C00C16656 /* Summary+CoreDataProperties.swift */; };
+		44CA42EF1E48917300C16656 /* Constituency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42EE1E48917300C16656 /* Constituency+CoreDataClass.swift */; };
+		44CA42F11E48919000C16656 /* ConstituencyLocAuth+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42F01E48919000C16656 /* ConstituencyLocAuth+CoreDataClass.swift */; };
+		44CA42F31E4891B100C16656 /* Detail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42F21E4891B100C16656 /* Detail+CoreDataClass.swift */; };
+		44CA42F51E4891CD00C16656 /* Election+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42F41E4891CD00C16656 /* Election+CoreDataClass.swift */; };
+		44CA42F71E4891E900C16656 /* EUReferendum+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42F61E4891E900C16656 /* EUReferendum+CoreDataClass.swift */; };
+		44CA42F91E48920800C16656 /* Party+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42F81E48920800C16656 /* Party+CoreDataClass.swift */; };
+		44CA42FB1E48922A00C16656 /* PartySummary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42FA1E48922A00C16656 /* PartySummary+CoreDataClass.swift */; };
+		44CA42FD1E48925700C16656 /* Simulation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42FC1E48925700C16656 /* Simulation+CoreDataClass.swift */; };
+		44CA42FF1E4892CE00C16656 /* SimPartyConstituencies+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA42FE1E4892CE00C16656 /* SimPartyConstituencies+CoreDataClass.swift */; };
+		44CA43011E4892F800C16656 /* Summary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43001E4892F800C16656 /* Summary+CoreDataClass.swift */; };
+		44CA43031E48931E00C16656 /* WardConLocAuth+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43021E48931E00C16656 /* WardConLocAuth+CoreDataClass.swift */; };
+		44CA43081E48953F00C16656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CA43061E48953F00C16656 /* Main.storyboard */; };
+		44CA43461E489A6A00C16656 /* DetailFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43451E489A6A00C16656 /* DetailFooterTableViewCell.swift */; };
+		44CA434A1E489A7D00C16656 /* DetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43471E489A7D00C16656 /* DetailHeaderTableViewCell.swift */; };
+		44CA434B1E489A7D00C16656 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43481E489A7D00C16656 /* DetailTableViewCell.swift */; };
+		44CA434C1E489A7D00C16656 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43491E489A7D00C16656 /* DetailTableViewController.swift */; };
+		44CA43501E489A9200C16656 /* EUDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA434D1E489A9200C16656 /* EUDetailTableViewCell.swift */; };
+		44CA43511E489A9200C16656 /* EUFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA434E1E489A9200C16656 /* EUFooterTableViewCell.swift */; };
+		44CA43521E489A9200C16656 /* EUHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA434F1E489A9200C16656 /* EUHeaderTableViewCell.swift */; };
+		44CA43581E489AA000C16656 /* EUSortTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43531E489AA000C16656 /* EUSortTableViewController.swift */; };
+		44CA43591E489AA000C16656 /* EUTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43541E489AA000C16656 /* EUTableViewController.swift */; };
+		44CA43631E489ABB00C16656 /* PartyResultsFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43601E489ABB00C16656 /* PartyResultsFooterTableViewCell.swift */; };
+		44CA43641E489ABB00C16656 /* PartyResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43611E489ABB00C16656 /* PartyResultsTableViewCell.swift */; };
+		44CA43651E489ABB00C16656 /* PartyResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43621E489ABB00C16656 /* PartyResultsTableViewController.swift */; };
+		44CA436E1E489ACB00C16656 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43661E489ACB00C16656 /* PieChartView.swift */; };
+		44CA436F1E489ACB00C16656 /* RegConTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43671E489ACB00C16656 /* RegConTableViewCell.swift */; };
+		44CA43701E489ACB00C16656 /* RegConTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43681E489ACB00C16656 /* RegConTableViewController.swift */; };
+		44CA43711E489ACB00C16656 /* RegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43691E489ACB00C16656 /* RegionTableViewController.swift */; };
+		44CA43721E489ACB00C16656 /* ResultsFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA436A1E489ACB00C16656 /* ResultsFooterTableViewCell.swift */; };
+		44CA43731E489ACB00C16656 /* ResultsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA436B1E489ACB00C16656 /* ResultsHeaderTableViewCell.swift */; };
+		44CA43741E489ACB00C16656 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA436C1E489ACB00C16656 /* ResultsTableViewCell.swift */; };
+		44CA43751E489ACB00C16656 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA436D1E489ACB00C16656 /* ResultsTableViewController.swift */; };
+		44CA43771E489AD500C16656 /* SimulateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43761E489AD500C16656 /* SimulateTableViewController.swift */; };
+		44CA437D1E489AE200C16656 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43781E489AE200C16656 /* Simulator.swift */; };
+		44CA437E1E489AE200C16656 /* SimulatorFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43791E489AE200C16656 /* SimulatorFooterTableViewCell.swift */; };
+		44CA437F1E489AE200C16656 /* SimulatorHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA437A1E489AE200C16656 /* SimulatorHeaderTableViewCell.swift */; };
+		44CA43801E489AE200C16656 /* SimulatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA437B1E489AE200C16656 /* SimulatorTableViewCell.swift */; };
+		44CA43811E489AE200C16656 /* SortTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA437C1E489AE200C16656 /* SortTableViewController.swift */; };
+		44CA43861E489AF100C16656 /* WardConTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43821E489AF100C16656 /* WardConTableViewCell.swift */; };
+		44CA43871E489AF100C16656 /* WardConTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43831E489AF100C16656 /* WardConTableViewController.swift */; };
+		44CA43881E489AF100C16656 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43841E489AF100C16656 /* WebViewController.swift */; };
+		44CA43891E489AF100C16656 /* YearTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA43851E489AF100C16656 /* YearTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4404D6061EF567DC00BFA69A /* helpManual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = helpManual.pdf; sourceTree = "<group>"; };
+		4404D6081EF574E800BFA69A /* GEUK.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GEUK.sqlite; sourceTree = "<group>"; };
+		4404D6091EF574E800BFA69A /* GEUK.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GEUK.sqlite-shm"; sourceTree = "<group>"; };
+		4404D60A1EF574E800BFA69A /* GEUK.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GEUK.sqlite-wal"; sourceTree = "<group>"; };
+		44CA427A1E488B4100C16656 /* GEUK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEUK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44CA427D1E488B4100C16656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44CA42871E488B4100C16656 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44CA428A1E488B4100C16656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44CA428C1E488B4100C16656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44CA42931E488DFE00C16656 /* GEUK.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GEUK.xcdatamodel; sourceTree = "<group>"; };
+		44CA42C31E488E9C00C16656 /* ConstituencyLocAuth+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstituencyLocAuth+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42C51E488E9C00C16656 /* Detail+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Detail+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42C71E488E9C00C16656 /* Election+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Election+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42C91E488E9C00C16656 /* Party+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Party+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42CB1E488E9C00C16656 /* PartySummary+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PartySummary+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42CD1E488E9C00C16656 /* Constituency+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constituency+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42CF1E488E9C00C16656 /* SimPartyConstituencies+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SimPartyConstituencies+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42D11E488E9C00C16656 /* WardConLocAuth+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WardConLocAuth+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42D31E488E9C00C16656 /* EUReferendum+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EUReferendum+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42D51E488E9C00C16656 /* Simulation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Simulation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42D71E488E9C00C16656 /* Summary+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Summary+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44CA42EE1E48917300C16656 /* Constituency+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constituency+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA42F01E48919000C16656 /* ConstituencyLocAuth+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstituencyLocAuth+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA42F21E4891B100C16656 /* Detail+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Detail+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA42F41E4891CD00C16656 /* Election+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Election+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA42F61E4891E900C16656 /* EUReferendum+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EUReferendum+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA42F81E48920800C16656 /* Party+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Party+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA42FA1E48922A00C16656 /* PartySummary+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PartySummary+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA42FC1E48925700C16656 /* Simulation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Simulation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA42FE1E4892CE00C16656 /* SimPartyConstituencies+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SimPartyConstituencies+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA43001E4892F800C16656 /* Summary+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Summary+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA43021E48931E00C16656 /* WardConLocAuth+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WardConLocAuth+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44CA43071E48953F00C16656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44CA43451E489A6A00C16656 /* DetailFooterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFooterTableViewCell.swift; sourceTree = "<group>"; };
+		44CA43471E489A7D00C16656 /* DetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		44CA43481E489A7D00C16656 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		44CA43491E489A7D00C16656 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		44CA434D1E489A9200C16656 /* EUDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EUDetailTableViewCell.swift; sourceTree = "<group>"; };
+		44CA434E1E489A9200C16656 /* EUFooterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EUFooterTableViewCell.swift; sourceTree = "<group>"; };
+		44CA434F1E489A9200C16656 /* EUHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EUHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		44CA43531E489AA000C16656 /* EUSortTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EUSortTableViewController.swift; sourceTree = "<group>"; };
+		44CA43541E489AA000C16656 /* EUTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EUTableViewController.swift; sourceTree = "<group>"; };
+		44CA43601E489ABB00C16656 /* PartyResultsFooterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyResultsFooterTableViewCell.swift; sourceTree = "<group>"; };
+		44CA43611E489ABB00C16656 /* PartyResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyResultsTableViewCell.swift; sourceTree = "<group>"; };
+		44CA43621E489ABB00C16656 /* PartyResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyResultsTableViewController.swift; sourceTree = "<group>"; };
+		44CA43661E489ACB00C16656 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		44CA43671E489ACB00C16656 /* RegConTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegConTableViewCell.swift; sourceTree = "<group>"; };
+		44CA43681E489ACB00C16656 /* RegConTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegConTableViewController.swift; sourceTree = "<group>"; };
+		44CA43691E489ACB00C16656 /* RegionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionTableViewController.swift; sourceTree = "<group>"; };
+		44CA436A1E489ACB00C16656 /* ResultsFooterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsFooterTableViewCell.swift; sourceTree = "<group>"; };
+		44CA436B1E489ACB00C16656 /* ResultsHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		44CA436C1E489ACB00C16656 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
+		44CA436D1E489ACB00C16656 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		44CA43761E489AD500C16656 /* SimulateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulateTableViewController.swift; sourceTree = "<group>"; };
+		44CA43781E489AE200C16656 /* Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
+		44CA43791E489AE200C16656 /* SimulatorFooterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorFooterTableViewCell.swift; sourceTree = "<group>"; };
+		44CA437A1E489AE200C16656 /* SimulatorHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		44CA437B1E489AE200C16656 /* SimulatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorTableViewCell.swift; sourceTree = "<group>"; };
+		44CA437C1E489AE200C16656 /* SortTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortTableViewController.swift; sourceTree = "<group>"; };
+		44CA43821E489AF100C16656 /* WardConTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardConTableViewCell.swift; sourceTree = "<group>"; };
+		44CA43831E489AF100C16656 /* WardConTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WardConTableViewController.swift; sourceTree = "<group>"; };
+		44CA43841E489AF100C16656 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		44CA43851E489AF100C16656 /* YearTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44CA42771E488B4100C16656 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44CA42711E488B4000C16656 = {
+			isa = PBXGroup;
+			children = (
+				44CA427C1E488B4100C16656 /* GEUK */,
+				44CA427B1E488B4100C16656 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44CA427B1E488B4100C16656 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44CA427A1E488B4100C16656 /* GEUK.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44CA427C1E488B4100C16656 /* GEUK */ = {
+			isa = PBXGroup;
+			children = (
+				44CA43041E48937B00C16656 /* Database */,
+				44CA42951E488E4D00C16656 /* Data Model */,
+				44CA43051E4894C000C16656 /* StoryBoards */,
+				4404D6061EF567DC00BFA69A /* helpManual.pdf */,
+				44CA43491E489A7D00C16656 /* DetailTableViewController.swift */,
+				44CA43471E489A7D00C16656 /* DetailHeaderTableViewCell.swift */,
+				44CA43481E489A7D00C16656 /* DetailTableViewCell.swift */,
+				44CA43451E489A6A00C16656 /* DetailFooterTableViewCell.swift */,
+				44CA434F1E489A9200C16656 /* EUHeaderTableViewCell.swift */,
+				44CA43541E489AA000C16656 /* EUTableViewController.swift */,
+				44CA434D1E489A9200C16656 /* EUDetailTableViewCell.swift */,
+				44CA434E1E489A9200C16656 /* EUFooterTableViewCell.swift */,
+				44CA43531E489AA000C16656 /* EUSortTableViewController.swift */,
+				44CA43621E489ABB00C16656 /* PartyResultsTableViewController.swift */,
+				44CA43611E489ABB00C16656 /* PartyResultsTableViewCell.swift */,
+				44CA43601E489ABB00C16656 /* PartyResultsFooterTableViewCell.swift */,
+				44CA43661E489ACB00C16656 /* PieChartView.swift */,
+				44CA43681E489ACB00C16656 /* RegConTableViewController.swift */,
+				44CA43671E489ACB00C16656 /* RegConTableViewCell.swift */,
+				44CA43691E489ACB00C16656 /* RegionTableViewController.swift */,
+				44CA436D1E489ACB00C16656 /* ResultsTableViewController.swift */,
+				44CA436B1E489ACB00C16656 /* ResultsHeaderTableViewCell.swift */,
+				44CA436C1E489ACB00C16656 /* ResultsTableViewCell.swift */,
+				44CA436A1E489ACB00C16656 /* ResultsFooterTableViewCell.swift */,
+				44CA43781E489AE200C16656 /* Simulator.swift */,
+				44CA43761E489AD500C16656 /* SimulateTableViewController.swift */,
+				44CA437A1E489AE200C16656 /* SimulatorHeaderTableViewCell.swift */,
+				44CA437B1E489AE200C16656 /* SimulatorTableViewCell.swift */,
+				44CA43791E489AE200C16656 /* SimulatorFooterTableViewCell.swift */,
+				44CA437C1E489AE200C16656 /* SortTableViewController.swift */,
+				44CA43831E489AF100C16656 /* WardConTableViewController.swift */,
+				44CA43821E489AF100C16656 /* WardConTableViewCell.swift */,
+				44CA43841E489AF100C16656 /* WebViewController.swift */,
+				44CA43851E489AF100C16656 /* YearTableViewController.swift */,
+				44CA427D1E488B4100C16656 /* AppDelegate.swift */,
+				44CA42871E488B4100C16656 /* Assets.xcassets */,
+				44CA428C1E488B4100C16656 /* Info.plist */,
+			);
+			path = GEUK;
+			sourceTree = "<group>";
+		};
+		44CA42951E488E4D00C16656 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				44CA42CD1E488E9C00C16656 /* Constituency+CoreDataProperties.swift */,
+				44CA42C31E488E9C00C16656 /* ConstituencyLocAuth+CoreDataProperties.swift */,
+				44CA42C51E488E9C00C16656 /* Detail+CoreDataProperties.swift */,
+				44CA42C71E488E9C00C16656 /* Election+CoreDataProperties.swift */,
+				44CA42D31E488E9C00C16656 /* EUReferendum+CoreDataProperties.swift */,
+				44CA42C91E488E9C00C16656 /* Party+CoreDataProperties.swift */,
+				44CA42CB1E488E9C00C16656 /* PartySummary+CoreDataProperties.swift */,
+				44CA42CF1E488E9C00C16656 /* SimPartyConstituencies+CoreDataProperties.swift */,
+				44CA42D51E488E9C00C16656 /* Simulation+CoreDataProperties.swift */,
+				44CA42D71E488E9C00C16656 /* Summary+CoreDataProperties.swift */,
+				44CA42D11E488E9C00C16656 /* WardConLocAuth+CoreDataProperties.swift */,
+				44CA42EE1E48917300C16656 /* Constituency+CoreDataClass.swift */,
+				44CA42F01E48919000C16656 /* ConstituencyLocAuth+CoreDataClass.swift */,
+				44CA42F21E4891B100C16656 /* Detail+CoreDataClass.swift */,
+				44CA42F41E4891CD00C16656 /* Election+CoreDataClass.swift */,
+				44CA42F61E4891E900C16656 /* EUReferendum+CoreDataClass.swift */,
+				44CA42F81E48920800C16656 /* Party+CoreDataClass.swift */,
+				44CA42FA1E48922A00C16656 /* PartySummary+CoreDataClass.swift */,
+				44CA42FE1E4892CE00C16656 /* SimPartyConstituencies+CoreDataClass.swift */,
+				44CA42FC1E48925700C16656 /* Simulation+CoreDataClass.swift */,
+				44CA43001E4892F800C16656 /* Summary+CoreDataClass.swift */,
+				44CA43021E48931E00C16656 /* WardConLocAuth+CoreDataClass.swift */,
+				44CA42921E488DFE00C16656 /* GEUK.xcdatamodeld */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		44CA43041E48937B00C16656 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				4404D6081EF574E800BFA69A /* GEUK.sqlite */,
+				4404D6091EF574E800BFA69A /* GEUK.sqlite-shm */,
+				4404D60A1EF574E800BFA69A /* GEUK.sqlite-wal */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		44CA43051E4894C000C16656 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				44CA43061E48953F00C16656 /* Main.storyboard */,
+				44CA42891E488B4100C16656 /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44CA42791E488B4100C16656 /* GEUK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44CA428F1E488B4100C16656 /* Build configuration list for PBXNativeTarget "GEUK" */;
+			buildPhases = (
+				44CA42761E488B4100C16656 /* Sources */,
+				44CA42771E488B4100C16656 /* Frameworks */,
+				44CA42781E488B4100C16656 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GEUK;
+			productName = GEUK;
+			productReference = 44CA427A1E488B4100C16656 /* GEUK.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44CA42721E488B4000C16656 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Mary Forde";
+				TargetAttributes = {
+					44CA42791E488B4100C16656 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = GSPDVLAWSC;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 44CA42751E488B4100C16656 /* Build configuration list for PBXProject "GEUK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44CA42711E488B4000C16656;
+			productRefGroup = 44CA427B1E488B4100C16656 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44CA42791E488B4100C16656 /* GEUK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44CA42781E488B4100C16656 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4404D60C1EF574E800BFA69A /* GEUK.sqlite-shm in Resources */,
+				4404D60D1EF574E800BFA69A /* GEUK.sqlite-wal in Resources */,
+				4404D6071EF567DC00BFA69A /* helpManual.pdf in Resources */,
+				44CA43081E48953F00C16656 /* Main.storyboard in Resources */,
+				44CA428B1E488B4100C16656 /* LaunchScreen.storyboard in Resources */,
+				4404D60B1EF574E800BFA69A /* GEUK.sqlite in Resources */,
+				44CA42881E488B4100C16656 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44CA42761E488B4100C16656 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44CA43711E489ACB00C16656 /* RegionTableViewController.swift in Sources */,
+				44CA43631E489ABB00C16656 /* PartyResultsFooterTableViewCell.swift in Sources */,
+				44CA42F51E4891CD00C16656 /* Election+CoreDataClass.swift in Sources */,
+				44CA434C1E489A7D00C16656 /* DetailTableViewController.swift in Sources */,
+				44CA42EB1E488E9C00C16656 /* Simulation+CoreDataProperties.swift in Sources */,
+				44CA42DB1E488E9C00C16656 /* Detail+CoreDataProperties.swift in Sources */,
+				44CA43031E48931E00C16656 /* WardConLocAuth+CoreDataClass.swift in Sources */,
+				44CA427E1E488B4100C16656 /* AppDelegate.swift in Sources */,
+				44CA42FF1E4892CE00C16656 /* SimPartyConstituencies+CoreDataClass.swift in Sources */,
+				44CA43581E489AA000C16656 /* EUSortTableViewController.swift in Sources */,
+				44CA42F71E4891E900C16656 /* EUReferendum+CoreDataClass.swift in Sources */,
+				44CA42941E488DFE00C16656 /* GEUK.xcdatamodeld in Sources */,
+				44CA43871E489AF100C16656 /* WardConTableViewController.swift in Sources */,
+				44CA43651E489ABB00C16656 /* PartyResultsTableViewController.swift in Sources */,
+				44CA43521E489A9200C16656 /* EUHeaderTableViewCell.swift in Sources */,
+				44CA42FD1E48925700C16656 /* Simulation+CoreDataClass.swift in Sources */,
+				44CA42EF1E48917300C16656 /* Constituency+CoreDataClass.swift in Sources */,
+				44CA43751E489ACB00C16656 /* ResultsTableViewController.swift in Sources */,
+				44CA43591E489AA000C16656 /* EUTableViewController.swift in Sources */,
+				44CA434B1E489A7D00C16656 /* DetailTableViewCell.swift in Sources */,
+				44CA42F11E48919000C16656 /* ConstituencyLocAuth+CoreDataClass.swift in Sources */,
+				44CA42D91E488E9C00C16656 /* ConstituencyLocAuth+CoreDataProperties.swift in Sources */,
+				44CA43721E489ACB00C16656 /* ResultsFooterTableViewCell.swift in Sources */,
+				44CA437E1E489AE200C16656 /* SimulatorFooterTableViewCell.swift in Sources */,
+				44CA42ED1E488E9C00C16656 /* Summary+CoreDataProperties.swift in Sources */,
+				44CA42DF1E488E9C00C16656 /* Party+CoreDataProperties.swift in Sources */,
+				44CA437F1E489AE200C16656 /* SimulatorHeaderTableViewCell.swift in Sources */,
+				44CA43641E489ABB00C16656 /* PartyResultsTableViewCell.swift in Sources */,
+				44CA42DD1E488E9C00C16656 /* Election+CoreDataProperties.swift in Sources */,
+				44CA43801E489AE200C16656 /* SimulatorTableViewCell.swift in Sources */,
+				44CA42E11E488E9C00C16656 /* PartySummary+CoreDataProperties.swift in Sources */,
+				44CA436F1E489ACB00C16656 /* RegConTableViewCell.swift in Sources */,
+				44CA42E71E488E9C00C16656 /* WardConLocAuth+CoreDataProperties.swift in Sources */,
+				44CA43461E489A6A00C16656 /* DetailFooterTableViewCell.swift in Sources */,
+				44CA43701E489ACB00C16656 /* RegConTableViewController.swift in Sources */,
+				44CA43861E489AF100C16656 /* WardConTableViewCell.swift in Sources */,
+				44CA42FB1E48922A00C16656 /* PartySummary+CoreDataClass.swift in Sources */,
+				44CA43741E489ACB00C16656 /* ResultsTableViewCell.swift in Sources */,
+				44CA43011E4892F800C16656 /* Summary+CoreDataClass.swift in Sources */,
+				44CA43881E489AF100C16656 /* WebViewController.swift in Sources */,
+				44CA42F31E4891B100C16656 /* Detail+CoreDataClass.swift in Sources */,
+				44CA43511E489A9200C16656 /* EUFooterTableViewCell.swift in Sources */,
+				44CA42F91E48920800C16656 /* Party+CoreDataClass.swift in Sources */,
+				44CA434A1E489A7D00C16656 /* DetailHeaderTableViewCell.swift in Sources */,
+				44CA437D1E489AE200C16656 /* Simulator.swift in Sources */,
+				44CA42E51E488E9C00C16656 /* SimPartyConstituencies+CoreDataProperties.swift in Sources */,
+				44CA43731E489ACB00C16656 /* ResultsHeaderTableViewCell.swift in Sources */,
+				44CA43501E489A9200C16656 /* EUDetailTableViewCell.swift in Sources */,
+				44CA436E1E489ACB00C16656 /* PieChartView.swift in Sources */,
+				44CA42E31E488E9C00C16656 /* Constituency+CoreDataProperties.swift in Sources */,
+				44CA43811E489AE200C16656 /* SortTableViewController.swift in Sources */,
+				44CA43771E489AD500C16656 /* SimulateTableViewController.swift in Sources */,
+				44CA43891E489AF100C16656 /* YearTableViewController.swift in Sources */,
+				44CA42E91E488E9C00C16656 /* EUReferendum+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		44CA42891E488B4100C16656 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44CA428A1E488B4100C16656 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		44CA43061E48953F00C16656 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44CA43071E48953F00C16656 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44CA428D1E488B4100C16656 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44CA428E1E488B4100C16656 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44CA42901E488B4100C16656 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GSPDVLAWSC;
+				INFOPLIST_FILE = GEUK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fordeideas.GEUKV1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a668bd73-b700-4ac1-a0d3-4013442a9f1b";
+				PROVISIONING_PROFILE_SPECIFIER = GEUKV1Development;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		44CA42911E488B4100C16656 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = GSPDVLAWSC;
+				INFOPLIST_FILE = GEUK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fordeideas.GEUKV1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8ee0daa3-7c52-49aa-bbb4-ca3dab7a2855";
+				PROVISIONING_PROFILE_SPECIFIER = GEUKV1Distribution;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44CA42751E488B4100C16656 /* Build configuration list for PBXProject "GEUK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44CA428D1E488B4100C16656 /* Debug */,
+				44CA428E1E488B4100C16656 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44CA428F1E488B4100C16656 /* Build configuration list for PBXNativeTarget "GEUK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44CA42901E488B4100C16656 /* Debug */,
+				44CA42911E488B4100C16656 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		44CA42921E488DFE00C16656 /* GEUK.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				44CA42931E488DFE00C16656 /* GEUK.xcdatamodel */,
+			);
+			currentVersion = 44CA42931E488DFE00C16656 /* GEUK.xcdatamodel */;
+			path = GEUK.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 44CA42721E488B4000C16656 /* Project object */;
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1212" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Constituency" representedClassName="Constituency" syncable="YES">
+        <attribute name="constituencyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="onsid" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="regionName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="detailResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Detail" inverseName="constituency" inverseEntity="Detail" syncable="YES"/>
+        <relationship name="localAuthority" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ConstituencyLocAuth" inverseName="constituency" inverseEntity="ConstituencyLocAuth" syncable="YES"/>
+        <relationship name="summaryResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Summary" inverseName="constituency" inverseEntity="Summary" syncable="YES"/>
+    </entity>
+    <entity name="ConstituencyLocAuth" representedClassName="ConstituencyLocAuth" syncable="YES">
+        <attribute name="areaCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="onsid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wardsCon" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wardsLA" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="constituency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Constituency" inverseName="localAuthority" inverseEntity="Constituency" syncable="YES"/>
+        <relationship name="referendum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EUReferendum" inverseName="constituencies" inverseEntity="EUReferendum" syncable="YES"/>
+    </entity>
+    <entity name="Detail" representedClassName="Detail" syncable="YES">
+        <attribute name="change" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="onsid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partyCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="share" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="votes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="constituency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Constituency" inverseName="detailResults" inverseEntity="Constituency" syncable="YES"/>
+        <relationship name="election" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Election" inverseName="detailResults" inverseEntity="Election" syncable="YES"/>
+        <relationship name="party" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="detailResults" inverseEntity="Party" syncable="YES"/>
+        <relationship name="summaryResults" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Summary" inverseName="detailResults" inverseEntity="Summary" syncable="YES"/>
+    </entity>
+    <entity name="Election" representedClassName="Election" syncable="YES">
+        <attribute name="electorate" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="invalidVotes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="turnoutPercent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="validVotes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="detailResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Detail" inverseName="election" inverseEntity="Detail" syncable="YES"/>
+        <relationship name="summaryResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Summary" inverseName="election" inverseEntity="Summary" syncable="YES"/>
+    </entity>
+    <entity name="EUReferendum" representedClassName="EUReferendum" syncable="YES">
+        <attribute name="areaCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="areaName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="electorate" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="leavePercent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="leaveVotes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remainPercent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="remainVotes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="turnoutPercent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="constituencies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ConstituencyLocAuth" inverseName="referendum" inverseEntity="ConstituencyLocAuth" syncable="YES"/>
+    </entity>
+    <entity name="Party" representedClassName="Party" syncable="YES">
+        <attribute name="colour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partyCode" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="detailResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Detail" inverseName="party" inverseEntity="Detail" syncable="YES"/>
+        <relationship name="fromSim" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Simulation" inverseName="fromParty" inverseEntity="Simulation" syncable="YES"/>
+        <relationship name="partySummary" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PartySummary" inverseName="party" inverseEntity="PartySummary" syncable="YES"/>
+        <relationship name="simFrom" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SimPartyConstituencies" inverseName="from" inverseEntity="SimPartyConstituencies" syncable="YES"/>
+        <relationship name="simTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SimPartyConstituencies" inverseName="to" inverseEntity="SimPartyConstituencies" syncable="YES"/>
+        <relationship name="summaryPrev" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Summary" inverseName="prevParty" inverseEntity="Summary" syncable="YES"/>
+        <relationship name="summaryResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Summary" inverseName="party" inverseEntity="Summary" syncable="YES"/>
+        <relationship name="summaryrunnerup" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Summary" inverseName="runnerupparty" inverseEntity="Summary" syncable="YES"/>
+        <relationship name="toSim" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Simulation" inverseName="toParty" inverseEntity="Simulation" syncable="YES"/>
+    </entity>
+    <entity name="PartySummary" representedClassName="PartySummary" syncable="YES">
+        <attribute name="candidates" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="changePercent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="partyCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seats" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="votes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="votesPercent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="party" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="partySummary" inverseEntity="Party" syncable="YES"/>
+    </entity>
+    <entity name="SimPartyConstituencies" representedClassName="SimPartyConstituencies" syncable="YES">
+        <attribute name="constituencyCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="electorate" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="partyFrom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partyFromVotes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="partyTo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partyToVotes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="regionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="simFrom" inverseEntity="Party" syncable="YES"/>
+        <relationship name="to" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="simTo" inverseEntity="Party" syncable="YES"/>
+    </entity>
+    <entity name="Simulation" representedClassName="Simulation" syncable="YES">
+        <attribute name="changePercent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fromPartyCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toPartyCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fromParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="fromSim" inverseEntity="Party" syncable="YES"/>
+        <relationship name="toParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="toSim" inverseEntity="Party" syncable="YES"/>
+    </entity>
+    <entity name="Summary" representedClassName="Summary" syncable="YES">
+        <attribute name="electorate" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="invalidVotes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="majority" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="majorityPercent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="narrative" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="onsid" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="partyChanged" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partyCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="previousParty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="runnerUp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validVotes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="constituency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Constituency" inverseName="summaryResults" inverseEntity="Constituency" syncable="YES"/>
+        <relationship name="detailResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Detail" inverseName="summaryResults" inverseEntity="Detail" syncable="YES"/>
+        <relationship name="election" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Election" inverseName="summaryResults" inverseEntity="Election" syncable="YES"/>
+        <relationship name="party" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="summaryResults" inverseEntity="Party" syncable="YES"/>
+        <relationship name="prevParty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="summaryPrev" inverseEntity="Party" syncable="YES"/>
+        <relationship name="runnerupparty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="summaryrunnerup" inverseEntity="Party" syncable="YES"/>
+    </entity>
+    <entity name="WardConLocAuth" representedClassName="WardConLocAuth" syncable="YES">
+        <attribute name="areaId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="areaName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="onsid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wardId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wardName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Constituency" positionX="133" positionY="-450" width="128" height="163"/>
+        <element name="ConstituencyLocAuth" positionX="61" positionY="-594" width="128" height="135"/>
+        <element name="Detail" positionX="16" positionY="-13" width="128" height="253"/>
+        <element name="Election" positionX="-144" positionY="279" width="128" height="150"/>
+        <element name="EUReferendum" positionX="-261" positionY="-612" width="128" height="195"/>
+        <element name="Party" positionX="-279" positionY="-288" width="128" height="223"/>
+        <element name="PartySummary" positionX="-513" positionY="-63" width="128" height="180"/>
+        <element name="SimPartyConstituencies" positionX="-470" positionY="-574" width="128" height="195"/>
+        <element name="Simulation" positionX="-146" positionY="-378" width="128" height="150"/>
+        <element name="Summary" positionX="-342" positionY="-0" width="128" height="360"/>
+        <element name="WardConLocAuth" positionX="-306" positionY="-450" width="128" height="120"/>
+    </elements>
+</model>
